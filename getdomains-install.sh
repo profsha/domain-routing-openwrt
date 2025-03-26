@@ -251,14 +251,7 @@ EOF
 
         read -r -p "Enter the private key (from [Interface]):"$'\n' AWG_PRIVATE_KEY
 
-        while true; do
-            read -r -p "Enter internal IP address with subnet, example 192.168.100.5/24 (Address from [Interface]):"$'\n' AWG_IP
-            if echo "$AWG_IP" | egrep -oq '^([0-9]{1,3}\.){3}[0-9]{1,3}/[0-9]+$'; then
-                break
-            else
-                echo "This IP is not valid. Please repeat"
-            fi
-        done
+        read -r -p "Enter internal IP address with subnet, example 192.168.100.5/24 (Address from [Interface]):"$'\n' AWG_IP
 
         read -r -p "Enter Jc value (from [Interface]):"$'\n' AWG_JC
         read -r -p "Enter Jmin value (from [Interface]):"$'\n' AWG_JMIN
